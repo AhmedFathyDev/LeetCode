@@ -7,7 +7,8 @@ private:
 
     int maxPath(TreeNode *root)
     {
-        if (!root) return -1000;
+        if (!root)
+            return -1000;
 
         int root_left = maxPath(root->left);
         int root_right = maxPath(root->right);
@@ -18,7 +19,7 @@ private:
     }
 
 public:
-    Solution() : max_path_sum(-1000) { }
+    Solution() : max_path_sum(-1000) {}
     int maxPathSum(TreeNode *root)
     {
         maxPath(root);
